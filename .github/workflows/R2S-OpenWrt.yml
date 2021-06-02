@@ -132,14 +132,3 @@ jobs:
         name: OpenWRT_21.02
         path: ./artifact/
 
-    - name: Create release
-      id: create_release
-      uses: ncipollo/release-action@v1.8.0
-      with:
-        name: OpenWRT-R2S-R4S-X86-21.02.0-RC2
-        allowUpdates: true
-        tag: 21.02.0-rc2
-        commit: master
-        replacesArtifacts: true
-        token: ${{ secrets.workflow_token }}
-        artifacts: ./artifact/*.zip
